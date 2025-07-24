@@ -1,0 +1,14 @@
+Package: imgtransformR
+Title: Image Transformer
+Description: Apply various filters and transformations to image files and view and save them. Filter options include: Grayscale, Sepia, Blur, Brightness, Invert, Tint, Contrast, Rotate, Mirror, Sharpen, Temperature, and Saturation
+Version: 1.0
+Authors@R: person("Aayan", "Khan", role=c("aut", "cre", "cph"), email="aayan.khan02072007@gmail.com")
+License: MIT + file LICENSE
+Video: https://youtu.be/b07ESaYAnAg
+Requires: 
+    jpeg,
+    png,
+    stringr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
