@@ -24,3 +24,7 @@ save_image <- function(img_array, path) {
 display_image <- function(img) {
   plot(as.raster(img))
 }
+
+clamped <- function(img_array) {
+  return(pmin(pmax(img_array, 0), 1))
+}

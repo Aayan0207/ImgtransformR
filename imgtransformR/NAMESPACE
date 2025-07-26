@@ -18,4 +18,5 @@ export(invert_value)
 export(sepia_value_red)
 export(sepia_value_green)
 export(sepia_value_blue)
+export(clamped)
 
