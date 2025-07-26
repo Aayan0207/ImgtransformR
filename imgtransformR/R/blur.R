@@ -10,7 +10,7 @@ blur_image <- function(img_array, box = 3) {
     for (column in (1 + shift):(width - shift)) {
       for (channel in 1:3) {
         pixel_region <- tmp[(row - shift):(row + shift), (column - shift):(column + shift), channel]
-        img_array[row, column, channel] <- pmin(pmax(sum(pixel_region)/(box**2), 0), 1)
+        img_array[row, column, channel] <- pmin(pmax(mean(pixel_region), 0), 1)
       }
     }
   }
