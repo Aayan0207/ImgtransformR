@@ -3,7 +3,7 @@ saturate_image <- function(img_array, factor) {
   G <- img_array[, , 2]
   B <- img_array[, , 3]
   for (channel in 1:3) {
-    img_array[, , channel] <- pmax(pmin(grayscale_value(R, G, B) + factor * (img_array[, , channel] - grayscale_value(R, G, B)), 1), 0)
+    img_array[, , channel] <- grayscale_value(R, G, B) + factor * (img_array[, , channel] - grayscale_value(R, G, B))
   }
-  return(img_array)
+  return(clamped(img_array))
 }

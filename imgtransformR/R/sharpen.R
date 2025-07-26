@@ -7,9 +7,9 @@ sharpen_image <- function(img_array) {
     for (column in 2:(width - 1)) {
       for (channel in 1:3) {
         pixel_region <- tmp[(row - 1):(row + 1), (column - 1):(column + 1), channel]
-        img_array[row, column, channel] <- pmin(pmax(sum(pixel_region * kernel), 0), 1)
+        img_array[row, column, channel] <- sum(pixel_region * kernel)
       }
     }
   }
-  return(img_array)
+  return(clamped(img_array))
 }
