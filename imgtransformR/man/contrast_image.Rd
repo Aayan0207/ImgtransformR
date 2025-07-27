@@ -21,5 +21,5 @@ img_array <- open_image("Example.png")
 
 display_image(contrast_image(img_array, 0.5))
 img <- contrast_image(img_array, 0.3)
-save_image(contrast_image(img_array, 0.4), "contrast.png")
+save_image(contrast_image(img_array, 1.6), "contrast.png")
 }
