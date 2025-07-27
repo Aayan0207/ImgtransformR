@@ -10,7 +10,7 @@ contrast_image(img_array, factor)
     Image file in the form of an R array object.
   }
   \item{factor}{
-    Factor controlling the intensity of contrast. Ideal range = (0,1).
+    Factor controlling the intensity of contrast. Ideal range = [0.5, 2.0].
   }
 }
 \value{
