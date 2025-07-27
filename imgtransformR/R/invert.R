@@ -3,8 +3,8 @@ invert_value <- function(value) {
 }
 
 invert_image <- function(img_array) {
-  img_array[, , 1] <- invert_value(img_array[, , 1])
-  img_array[, , 2] <- invert_value(img_array[, , 2])
-  img_array[, , 3] <- invert_value(img_array[, , 3])
+  for (channel in 1:3) {
+    img_array[, , channel] <- invert_value(img_array[, , channel])
+  }
   return(img_array)
 }
